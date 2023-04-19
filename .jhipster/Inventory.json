@@ -1,0 +1,38 @@
+{
+  "name": "Inventory",
+  "fields": [
+    {
+      "fieldName": "count",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "book",
+      "otherEntityRelationshipName": "inventory",
+      "relationshipName": "book",
+      "otherEntityField": "title",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "bookStore",
+      "otherEntityRelationshipName": "inventory",
+      "relationshipName": "store",
+      "otherEntityField": "bookStoreName",
+      "ownerSide": true
+    }
+  ],
+  "entityTableName": "inventory",
+  "dto": "no",
+  "pagination": "no",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "changelogDate": "20230419183025"
+}

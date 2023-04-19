@@ -1,0 +1,8 @@
+version: '3.8'
+services:
+  fsdevnodeinterview-app:
+    build: ../../..
+    container_name: fsdevnodeinterview-app
+    environment:
+    ports:
+      - 8081:8081
